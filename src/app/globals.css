@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -23,4 +25,267 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes typing {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.typing-animation {
+  opacity: 0;
+  animation: typing 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes about-fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes about-fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes tech-stack-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-tech-stack {
+  opacity: 0;
+  animation: tech-stack-fade-in 0.7s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+@keyframes tech-stack-title-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-16px) rotate(-5deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0) scale(1);
+  }
+}
+
+.animate-tech-stack-title {
+  opacity: 0;
+  animation: tech-stack-title-fade-in 0.7s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+.tech-stack-logo {
+  transition: transform 0.3s ease;
+}
+
+.tech-stack-logo:hover {
+  transform: translateY(-5px) scale(1.2);
+}
+
+@keyframes about-title-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) rotate(-3deg) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0) scale(1);
+  }
+}
+
+.animate-about-title {
+  opacity: 0;
+  animation: about-title-fade-in 0.8s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+.tech-stack-item {
+  transition: transform 0.3s ease;
+}
+
+.tech-stack-item:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+@keyframes featured-projects-section-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) rotate(-2deg) translateY(40px);
+    filter: blur(6px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.02) rotate(1deg) translateY(-8px);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0) translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-featured-projects-section {
+  opacity: 0;
+  animation: featured-projects-section-in 1.1s cubic-bezier(0.4,0,0.2,1) 0.2s forwards;
+}
+
+@keyframes project-card-in {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(10deg) translateY(50px);
+    filter: brightness(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0) translateY(0);
+    filter: brightness(100%);
+  }
+}
+
+@keyframes future-project-card-in {
+  0% {
+    opacity: 0;
+    transform: perspective(800px) rotateY(-20deg) translateX(-50px);
+    filter: saturate(0);
+  }
+  50% {
+    transform: perspective(800px) rotateY(5deg) translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(800px) rotateY(0) translateX(0);
+    filter: saturate(1);
+  }
+}
+
+.animate-project-card {
+  opacity: 0;
+  animation: project-card-in 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+  transform-origin: center bottom;
+}
+
+.animate-future-project-card {
+  opacity: 0;
+  animation: future-project-card-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transform-origin: left center;
+}
+
+@keyframes service-card-in {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(-30deg) translateX(-100px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0) translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes service-icon-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.5) rotate(20deg);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2) rotate(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);
+  }
+}
+
+@keyframes service-title-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes service-description-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-service-card {
+  opacity: 0;
+  animation: service-card-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-service-icon {
+  opacity: 0;
+  animation: service-icon-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-service-title {
+  opacity: 0;
+  animation: service-title-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-service-description {
+  opacity: 0;
+  animation: service-description-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
 }
