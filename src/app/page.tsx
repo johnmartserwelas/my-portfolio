@@ -427,34 +427,37 @@ export default function Home() {
                 { name: 'JavaScript', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg', style: 'bg-yellow-50 hover:bg-yellow-100 dark:bg-yellow-900/30 dark:hover:bg-yellow-800/40' },
                 { name: 'Figma', logo: 'https://www.vectorlogo.zone/logos/figma/figma-icon.svg', style: 'bg-purple-50 hover:bg-purple-100 dark:bg-purple-900/30 dark:hover:bg-purple-800/40' }
               ].map((tech, idx) => (
-                <div 
+                                <div 
                   key={tech.name} 
                   className={`group relative px-3 py-2.5 rounded-lg flex items-center gap-2 cursor-pointer ${tech.style} w-full
-                            transition-all duration-300 ease-out hover:shadow-md
+                            transition-transform duration-200 ease-out hover:shadow-md active:shadow-inner
+                            hover:-translate-y-0.5 active:translate-y-0 touch-none
                             ${aboutContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                   style={{ 
-                    transitionDelay: aboutContentVisible ? `${0.5 + idx * 0.1}s` : '0s',
+                    transitionDelay: aboutContentVisible ? `${0.2 + idx * 0.05}s` : '0s',
                     transform: `translateY(${aboutContentVisible ? '0' : '2rem'})`
                   }}
                 >
                   <div className="flex-shrink-0 relative z-10">
-                  <img 
-                    src={tech.logo} 
-                    alt={tech.name} 
-                      className="w-5 h-5 transition-all duration-300 ease-out
+                    <img 
+                      src={tech.logo} 
+                      alt={tech.name} 
+                      className="w-5 h-5 transition-transform duration-200 ease-out
                                group-hover:scale-110 group-hover:rotate-3
-                               group-active:scale-95 group-active:rotate-0" 
-                  />
+                               group-active:scale-95 group-active:rotate-0
+                               touch-manipulation" 
+                    />
                   </div>
                   <span className="text-xs font-medium text-gray-800 dark:text-gray-200 z-10
-                                 transition-all duration-300 ease-out
+                                 transition-colors duration-200 ease-out
                                  group-hover:text-gray-900 dark:group-hover:text-white 
-                                 group-hover:font-semibold break-words leading-tight">
+                                 group-hover:font-semibold group-active:font-medium
+                                 break-words leading-tight">
                     {tech.name}
                   </span>
                   <div className="absolute inset-0 bg-white/5 dark:bg-white/10 opacity-0 
-                               group-hover:opacity-100 group-active:opacity-50
-                               rounded-lg transition-all duration-300 ease-out pointer-events-none" />
+                               group-hover:opacity-100 group-active:opacity-70
+                               rounded-lg transition-opacity duration-200 ease-out pointer-events-none" />
                 </div>
               ))}
             </div>
