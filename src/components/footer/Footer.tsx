@@ -78,7 +78,7 @@ const Footer = () => {
                   GitHub
                 </span>
               </a>
-              <a href="https://www.linkedin.com/in/john-mart-516389369/" target="_blank" rel="noopener noreferrer" 
+              <a href="https://www.linkedin.com/in/john-mart-serwelas-516389369/" target="_blank" rel="noopener noreferrer" 
                  className="group flex flex-col items-center gap-2 text-gray-600 hover:text-[#0077b5] dark:text-gray-300 transition-all duration-300 hover:-translate-y-2">
                 <div className="relative">
                   <div className="absolute inset-0 bg-[#0077b5] rounded-full blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
