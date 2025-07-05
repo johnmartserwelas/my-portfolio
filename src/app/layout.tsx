@@ -16,9 +16,6 @@ export const metadata: Metadata = {
   creator: "John Mart",
   publisher: "John Mart",
   robots: "index, follow",
-  alternates: {
-    canonical: "https://my-portfolio-nine-omega-66.vercel.app/",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -28,7 +25,7 @@ export const metadata: Metadata = {
     description: "Full Stack Developer Portfolio showcasing web development projects and skills in React, Next.js, TypeScript, and more.",
     images: [
       {
-        url: "https://my-portfolio-nine-omega-66.vercel.app/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "John Mart - Full Stack Developer",
@@ -39,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "John Mart - Full Stack Developer Portfolio",
     description: "Full Stack Developer Portfolio showcasing web development projects and skills in React, Next.js, TypeScript, and more.",
-    images: ["https://my-portfolio-nine-omega-66.vercel.app/og-image.png"],
+    images: ["/og-image.png"],
     creator: "@johnmart", // Add your Twitter handle if you have one
     site: "@johnmart", // Add your Twitter handle if you have one
   },
