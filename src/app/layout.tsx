@@ -37,8 +37,11 @@ export const metadata: Metadata = {
     title: "John Mart - Full Stack Developer Portfolio",
     description: "Full Stack Developer Portfolio showcasing web development projects and skills in React, Next.js, TypeScript, and more.",
     images: ["/og-image.png"],
-    creator: "@johnmart", // Add your Twitter handle if you have one
-    site: "@johnmart", // Add your Twitter handle if you have one
+  },
+  icons: {
+    icon: "/og-image.png",
+    shortcut: "/og-image.png",
+    apple: "/og-image.png",
   },
 };
 
@@ -49,13 +52,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
-        />
-        <link rel="icon" href="/og-image.png" />
-      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
       </body>
