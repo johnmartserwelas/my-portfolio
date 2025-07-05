@@ -16,9 +16,6 @@ export const metadata: Metadata = {
   creator: "John Mart",
   publisher: "John Mart",
   robots: "index, follow",
-  category: "Portfolio",
-  classification: "Personal Website",
-  referrer: "origin-when-cross-origin",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -32,10 +29,8 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "John Mart - Full Stack Developer",
-        type: "image/png",
       },
     ],
-    countryName: "Philippines",
   },
   twitter: {
     card: "summary_large_image",
@@ -43,6 +38,10 @@ export const metadata: Metadata = {
     description: "Full Stack Developer Portfolio showcasing web development projects and skills in React, Next.js, TypeScript, and more.",
     images: ["https://my-portfolio-nine-omega-66.vercel.app/og-image.png"],
     creator: "@johnmartserwelas",
+  },
+  other: {
+    "theme-color": "#3B82F6",
+    "msapplication-TileColor": "#3B82F6",
   },
 };
 
@@ -58,7 +57,19 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <link rel="icon" href="/pic.png" />
+        <link rel="icon" href="/og-image.png" />
+        <meta name="author" content="John Mart" />
+        <meta name="theme-color" content="#3B82F6" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:image:alt" content="John Mart - Full Stack Developer Portfolio" />
+        
+        {/* Additional meta tags for better compatibility */}
+        <meta property="og:image" content="https://my-portfolio-nine-omega-66.vercel.app/og-image.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="twitter:image" content="https://my-portfolio-nine-omega-66.vercel.app/og-image.png" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
