@@ -216,7 +216,7 @@ export default function Home() {
                     </span>
                   </button>
                   <a 
-                    href="/Resume.pdf"
+                    href="/RESUME.pdf"
                     download
                     className="group w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-3.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full 
                              hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105 transition-all duration-300 
